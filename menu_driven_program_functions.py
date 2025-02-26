@@ -28,10 +28,10 @@ def get_valid_choice() -> int:
             choice = int(input("Enter your choice (1-3): "))
             if choice in [1, 2, 3]:
                 return choice  # Valid choice
-            else:
-                print("Invalid choice. Please enter a number between 1 and 3.")
-        except ValueError:
-            print("Invalid input. Please enter a number.")
+            print("Invalid choice. Please enter a number between 1 and 3.")  # No else needed
+        except ValueError:  # Correctly handles invalid (non-integer) input
+            print("Invalid input. Please enter a number.")  # Indented correctly
+
 
 def greet_user():
     """Displays a greeting message."""
